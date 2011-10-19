@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.thrift.test;
+package org.apache.thrift7.test;
 
 import java.nio.ByteBuffer;
 import java.util.LinkedList;

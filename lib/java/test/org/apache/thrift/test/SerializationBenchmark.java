@@ -18,17 +18,17 @@
  */
 
 
-package org.apache.thrift.test;
+package org.apache.thrift7.test;
 
-import org.apache.thrift.Fixtures;
-import org.apache.thrift.TBase;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.transport.TMemoryBuffer;
-import org.apache.thrift.transport.TMemoryInputTransport;
-import org.apache.thrift.transport.TTransport;
-import org.apache.thrift.transport.TTransportException;
+import org.apache.thrift7.Fixtures;
+import org.apache.thrift7.TBase;
+import org.apache.thrift7.protocol.TBinaryProtocol;
+import org.apache.thrift7.protocol.TProtocol;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.transport.TMemoryBuffer;
+import org.apache.thrift7.transport.TMemoryInputTransport;
+import org.apache.thrift7.transport.TTransport;
+import org.apache.thrift7.transport.TTransportException;
 
 import thrift.test.OneOfEach;
 

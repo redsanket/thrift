@@ -18,7 +18,7 @@
  */
 
 
-package org.apache.thrift;
+package org.apache.thrift7;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

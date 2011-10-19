@@ -267,7 +267,7 @@ void t_javame_generator::init_generator() {
 /**
  * Packages the generated file
  *
- * @return String of the package, i.e. "package org.apache.thriftdemo;"
+ * @return String of the package, i.e. "package org.apache.thrift7demo;"
  */
 string t_javame_generator::java_package() {
   if (!package_name_.empty()) {
@@ -297,10 +297,10 @@ string t_javame_generator::java_type_imports() {
 string t_javame_generator::java_thrift_imports() {
   return
     string() +
-    "import org.apache.thrift.*;\n" +
-    "import org.apache.thrift.meta_data.*;\n" +
-    "import org.apache.thrift.transport.*;\n" +
-    "import org.apache.thrift.protocol.*;\n\n";
+    "import org.apache.thrift7.*;\n" +
+    "import org.apache.thrift7.meta_data.*;\n" +
+    "import org.apache.thrift7.transport.*;\n" +
+    "import org.apache.thrift7.protocol.*;\n\n";
 }
 
 /**
@@ -337,7 +337,7 @@ void t_javame_generator::generate_enum(t_enum* tenum) {
 
   generate_java_doc(f_enum, tenum);
   indent(f_enum) <<
-    "public class " << tenum->get_name() << " implements org.apache.thrift.TEnum ";
+    "public class " << tenum->get_name() << " implements org.apache.thrift7.TEnum ";
   scope_up(f_enum);
   f_enum << endl;
 

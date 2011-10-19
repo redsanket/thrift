@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.thrift.server;
+package org.apache.thrift7.server;
 
 
-import org.apache.thrift.TProcessor;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.server.TNonblockingServer.Args;
-import org.apache.thrift.transport.TFramedTransport;
-import org.apache.thrift.transport.TNonblockingServerSocket;
-import org.apache.thrift.transport.TTransport;
+import org.apache.thrift7.TProcessor;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.server.TNonblockingServer.Args;
+import org.apache.thrift7.transport.TFramedTransport;
+import org.apache.thrift7.transport.TNonblockingServerSocket;
+import org.apache.thrift7.transport.TTransport;
 
 public class TestNonblockingServer extends ServerTestBase {
 

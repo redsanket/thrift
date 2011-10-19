@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.thrift.protocol;
+package org.apache.thrift7.protocol;
 
 public class TestTJSONProtocol extends ProtocolTestBase {
   @Override

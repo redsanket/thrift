@@ -17,20 +17,20 @@
  * under the License.
  */
 
-package org.apache.thrift.test;
+package org.apache.thrift7.test;
 
 // Generated code
 import thrift.test.*;
 
-import org.apache.thrift.TApplicationException;
-import org.apache.thrift.TSerializer;
-import org.apache.thrift.transport.TTransport;
-import org.apache.thrift.transport.TSocket;
-import org.apache.thrift.transport.THttpClient;
-import org.apache.thrift.transport.TFramedTransport;
-import org.apache.thrift.transport.TTransportException;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TSimpleJSONProtocol;
+import org.apache.thrift7.TApplicationException;
+import org.apache.thrift7.TSerializer;
+import org.apache.thrift7.transport.TTransport;
+import org.apache.thrift7.transport.TSocket;
+import org.apache.thrift7.transport.THttpClient;
+import org.apache.thrift7.transport.TFramedTransport;
+import org.apache.thrift7.transport.TTransportException;
+import org.apache.thrift7.protocol.TBinaryProtocol;
+import org.apache.thrift7.protocol.TSimpleJSONProtocol;
 
 import java.util.Map;
 import java.util.HashMap;

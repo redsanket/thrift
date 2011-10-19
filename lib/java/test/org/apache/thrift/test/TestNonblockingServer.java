@@ -17,14 +17,14 @@
  * under the License.
  */
 
-package org.apache.thrift.test;
+package org.apache.thrift7.test;
 
-import org.apache.thrift.server.THsHaServer;
-import org.apache.thrift.server.TNonblockingServer;
-import org.apache.thrift.server.TServer;
-import org.apache.thrift.server.THsHaServer.Args;
-import org.apache.thrift.transport.TNonblockingServerSocket;
-import org.apache.thrift.server.ServerTestBase.TestHandler;
+import org.apache.thrift7.server.THsHaServer;
+import org.apache.thrift7.server.TNonblockingServer;
+import org.apache.thrift7.server.TServer;
+import org.apache.thrift7.server.THsHaServer.Args;
+import org.apache.thrift7.transport.TNonblockingServerSocket;
+import org.apache.thrift7.server.ServerTestBase.TestHandler;
 
 import thrift.test.ThriftTest;
 

@@ -17,23 +17,23 @@
  * under the License.
  */
 
-package org.apache.thrift.test;
+package org.apache.thrift7.test;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
-import org.apache.thrift.Fixtures;
-import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.transport.TIOStreamTransport;
-import org.apache.thrift.transport.TTransport;
+import org.apache.thrift7.Fixtures;
+import org.apache.thrift7.protocol.TProtocol;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.transport.TIOStreamTransport;
+import org.apache.thrift7.transport.TTransport;
 
 import thrift.test.CompactProtoTestStruct;
 
 public class ReadStruct {
   public static void main(String[] args) throws Exception {
     if (args.length != 2) {
-      System.out.println("usage: java -cp build/classes org.apache.thrift.test.ReadStruct filename proto_factory_class");
+      System.out.println("usage: java -cp build/classes org.apache.thrift7.test.ReadStruct filename proto_factory_class");
       System.out.println("Read in an instance of CompactProtocolTestStruct from 'file', making sure that it is equivalent to Fixtures.compactProtoTestStruct. Use a protocol from 'proto_factory_class'.");
     }
 

@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.thrift.server;
+package org.apache.thrift7.server;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,15 +28,15 @@ import java.util.Set;
 
 import junit.framework.TestCase;
 
-import org.apache.thrift.TException;
-import org.apache.thrift.TApplicationException;
-import org.apache.thrift.TProcessor;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TCompactProtocol;
-import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.transport.TSocket;
-import org.apache.thrift.transport.TTransport;
+import org.apache.thrift7.TException;
+import org.apache.thrift7.TApplicationException;
+import org.apache.thrift7.TProcessor;
+import org.apache.thrift7.protocol.TBinaryProtocol;
+import org.apache.thrift7.protocol.TCompactProtocol;
+import org.apache.thrift7.protocol.TProtocol;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.transport.TSocket;
+import org.apache.thrift7.transport.TTransport;
 
 import thrift.test.*;
 

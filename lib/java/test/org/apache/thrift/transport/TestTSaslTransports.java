@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.thrift.transport;
+package org.apache.thrift7.transport;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -39,12 +39,12 @@ import javax.security.sasl.SaslServerFactory;
 
 import junit.framework.TestCase;
 
-import org.apache.thrift.TProcessor;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.server.ServerTestBase;
-import org.apache.thrift.server.TServer;
-import org.apache.thrift.server.TSimpleServer;
-import org.apache.thrift.server.TServer.Args;
+import org.apache.thrift7.TProcessor;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.server.ServerTestBase;
+import org.apache.thrift7.server.TServer;
+import org.apache.thrift7.server.TSimpleServer;
+import org.apache.thrift7.server.TServer.Args;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

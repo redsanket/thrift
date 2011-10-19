@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.thrift;
+package org.apache.thrift7;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -31,9 +31,9 @@ import java.util.Set;
 
 import junit.framework.TestCase;
 
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.transport.TMemoryBuffer;
+import org.apache.thrift7.protocol.TBinaryProtocol;
+import org.apache.thrift7.protocol.TProtocol;
+import org.apache.thrift7.transport.TMemoryBuffer;
 
 import thrift.test.ComparableUnion;
 import thrift.test.Empty;

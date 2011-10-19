@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.thrift.protocol;
+package org.apache.thrift7.protocol;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -24,12 +24,12 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.apache.thrift.Fixtures;
-import org.apache.thrift.TBase;
-import org.apache.thrift.TDeserializer;
-import org.apache.thrift.TException;
-import org.apache.thrift.TSerializer;
-import org.apache.thrift.transport.TMemoryBuffer;
+import org.apache.thrift7.Fixtures;
+import org.apache.thrift7.TBase;
+import org.apache.thrift7.TDeserializer;
+import org.apache.thrift7.TException;
+import org.apache.thrift7.TSerializer;
+import org.apache.thrift7.transport.TMemoryBuffer;
 
 import thrift.test.CompactProtoTestStruct;
 import thrift.test.HolyMoley;

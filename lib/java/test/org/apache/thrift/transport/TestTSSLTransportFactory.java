@@ -17,18 +17,18 @@
  * under the License.
  */
 
-package org.apache.thrift.transport;
+package org.apache.thrift7.transport;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.thrift.TProcessor;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TProtocolFactory;
-import org.apache.thrift.server.ServerTestBase;
-import org.apache.thrift.server.TServer;
-import org.apache.thrift.server.TSimpleServer;
-import org.apache.thrift.server.TServer.Args;
+import org.apache.thrift7.TProcessor;
+import org.apache.thrift7.protocol.TBinaryProtocol;
+import org.apache.thrift7.protocol.TProtocolFactory;
+import org.apache.thrift7.server.ServerTestBase;
+import org.apache.thrift7.server.TServer;
+import org.apache.thrift7.server.TSimpleServer;
+import org.apache.thrift7.server.TServer.Args;
 
 public class TestTSSLTransportFactory extends ServerTestBase {
   private Thread serverThread;
