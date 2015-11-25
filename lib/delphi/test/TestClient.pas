@@ -467,8 +467,8 @@ begin
   except
     on e:TXception do begin
       Expect( e.ErrorCode = 1001,       'error code');
-      Expect( e.Message_  = 'Xception', 'error message');
-      Console.WriteLine( ' = ' + IntToStr(e.ErrorCode) + ', ' + e.Message_ );
+      Expect( e.TestMessage_  = 'Xception', 'error message');
+      Console.WriteLine( ' = ' + IntToStr(e.ErrorCode) + ', ' + e.TestMessage_ );
     end;
     on e:TTransportException do Expect( FALSE, 'Unexpected : "'+e.ToString+'"');
     on e:Exception do Expect( FALSE, 'Unexpected exception type "'+e.ClassName+'"');
@@ -916,7 +916,7 @@ begin
       Expect( x.__isset_ErrorCode, 'x.__isset_ErrorCode = '+BoolToString(x.__isset_ErrorCode));
       Expect( x.__isset_Message_,  'x.__isset_Message_ = '+BoolToString(x.__isset_Message_));
       Expect( x.ErrorCode = 1001, 'x.ErrorCode = '+IntToStr(x.ErrorCode));
-      Expect( x.Message_ = 'This is an Xception', 'x.Message = "'+x.Message_+'"');
+      Expect( x.TestMessage_ = 'This is an Xception', 'x.Message = "'+x.TestMessage_+'"');
     end;
     on e:Exception do Expect( FALSE, 'Unexpected exception "'+e.ClassName+'"');
   end;

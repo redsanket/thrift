@@ -276,7 +276,7 @@ void main(string[] args) {
         if (trace) writeln("  void\nFAILURE");
         throw new Exception("testException failed.");
       } catch (Xception e) {
-        if (trace) writefln("  {%s, \"%s\"}", e.errorCode, e.message);
+        if (trace) writefln("  {%s, \"%s\"}", e.errorCode, e.testMessage);
       }
 
       try {
@@ -296,7 +296,7 @@ void main(string[] args) {
         if (trace) writeln("  result\nFAILURE");
         throw new Exception("testMultiException failed.");
       } catch (Xception e) {
-        if (trace) writefln("  {%s, \"%s\"}", e.errorCode, e.message);
+        if (trace) writefln("  {%s, \"%s\"}", e.errorCode, e.testMessage);
       }
 
       try {

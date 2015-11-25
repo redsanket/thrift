@@ -538,7 +538,7 @@ public class TestClient {
           System.out.print("  void\nFAILURE\n");
           failCount++;
         } catch(Xception e) {
-          System.out.printf("  {%d, \"%s\"}\n", e.errorCode, e.message);
+          System.out.printf("  {%d, \"%s\"}\n", e.errorCode, e.testMessage);
         }
         
         try {
@@ -570,7 +570,7 @@ public class TestClient {
           System.out.print("  result\nFAILURE\n");
           failCount++;
         } catch(Xception e) {
-          System.out.printf("  {%d, \"%s\"}\n", e.errorCode, e.message);
+          System.out.printf("  {%d, \"%s\"}\n", e.errorCode, e.testMessage);
         }
         
         try {

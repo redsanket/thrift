@@ -96,7 +96,7 @@ struct SimpleList {
 }
 
 exception Xception {
-  1: string message,
+  1: string testMessage,
   2: i32 code = 1
 }
 

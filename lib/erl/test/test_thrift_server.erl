@@ -184,7 +184,7 @@ handle_function(testException, {String}) when is_binary(String) ->
     case String of
         <<"Xception">> ->
             throw(#'Xception'{errorCode = 1001,
-                            message = String});
+                              testMessage = String});
         _ ->
             ok
     end;
@@ -194,7 +194,7 @@ handle_function(testMultiException, {Arg0, Arg1}) ->
     case Arg0 of
         <<"Xception">> ->
             throw(#'Xception'{errorCode = 1001,
-                                   message = <<"This is an Xception">>});
+                              testMessage = <<"This is an Xception">>});
         <<"Xception2">> ->
             throw(#'Xception2'{errorCode = 2002,
                                     struct_thing =

@@ -153,7 +153,7 @@ class TestHandler : ThriftTest {
     if (arg == "Xception") {
       auto e = new Xception();
       e.errorCode = 1001;
-      e.message = arg;
+      e.testMessage = arg;
       throw e;
     } else if (arg == "ApplicationException") {
       throw new TException();
@@ -166,7 +166,7 @@ class TestHandler : ThriftTest {
     if (arg0 == "Xception") {
       auto e = new Xception();
       e.errorCode = 1001;
-      e.message = "This is an Xception";
+      e.testMessage = "This is an Xception";
       throw e;
     } else if (arg0 == "Xception2") {
       auto e = new Xception2();

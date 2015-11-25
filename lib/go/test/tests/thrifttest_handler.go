@@ -175,7 +175,7 @@ func (p *ThriftTestHandler) TestException(arg string) (err error) {
 	if arg == "Xception" {
 		x := thrifttest.NewXception()
 		x.ErrorCode = 1001
-		x.Message = arg
+		x.TestMessage = arg
 		return x
 	} else if arg == "TException" {
 		return thrift.TException(errors.New(arg))
@@ -188,7 +188,7 @@ func (p *ThriftTestHandler) TestMultiException(arg0 string, arg1 string) (r *thr
 	if arg0 == "Xception" {
 		x := thrifttest.NewXception()
 		x.ErrorCode = 1001
-		x.Message = "This is an Xception"
+		x.TestMessage = "This is an Xception"
 		return nil, x
 	} else if arg0 == "Xception2" {
 		x2 := thrifttest.NewXception2()

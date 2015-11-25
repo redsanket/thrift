@@ -253,13 +253,13 @@ describe 'Struct' do
       begin
         raise SpecNamespace::Xception, "something happened"
       rescue Thrift::Exception => e
-        e.message.should == "something happened"
+        e.testMessage.should == "something happened"
         e.code.should == 1
         # ensure it gets serialized properly, this is the really important part
         prot = Thrift::BaseProtocol.new(mock("trans"))
         prot.should_receive(:write_struct_begin).with("SpecNamespace::Xception")
         prot.should_receive(:write_struct_end)
-        prot.should_receive(:write_field_begin).with('message', Thrift::Types::STRING, 1)#, "something happened")
+        prot.should_receive(:write_field_begin).with('testMessage', Thrift::Types::STRING, 1)#, "something happened")
         prot.should_receive(:write_string).with("something happened")
         prot.should_receive(:write_field_begin).with('code', Thrift::Types::I32, 2)#, 1)
         prot.should_receive(:write_i32).with(1)
@@ -272,14 +272,14 @@ describe 'Struct' do
 
     it "should support the regular initializer for exception structs" do
       begin
-        raise SpecNamespace::Xception, :message => "something happened", :code => 5
+        raise SpecNamespace::Xception, :testMessage => "something happened", :code => 5
       rescue Thrift::Exception => e
-        e.message.should == "something happened"
+        e.testMessage.should == "something happened"
         e.code.should == 5
         prot = Thrift::BaseProtocol.new(mock("trans"))
         prot.should_receive(:write_struct_begin).with("SpecNamespace::Xception")
         prot.should_receive(:write_struct_end)
-        prot.should_receive(:write_field_begin).with('message', Thrift::Types::STRING, 1)
+        prot.should_receive(:write_field_begin).with('testMessage', Thrift::Types::STRING, 1)
         prot.should_receive(:write_string).with("something happened")
         prot.should_receive(:write_field_begin).with('code', Thrift::Types::I32, 2)
         prot.should_receive(:write_i32).with(5)

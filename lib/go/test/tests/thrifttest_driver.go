@@ -222,7 +222,7 @@ func (p *ThriftTestDriver) Start() {
 
 	if err, ok := client.TestException("Xception").(*thrifttest.Xception); ok == false || err == nil {
 		t.Fatal("TestException Xception failed")
-	} else if err.ErrorCode != 1001 || err.Message != "Xception" {
+	} else if err.ErrorCode != 1001 || err.TestMessage != "Xception" {
 		t.Fatal("TestException Xception failed")
 	}
 

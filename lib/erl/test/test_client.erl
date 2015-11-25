@@ -107,7 +107,7 @@ start(Args) ->
       ClientS1
     catch
       throw:{ClientS2, {exception, ExnS1 = #'Xception'{}}} ->
-        #'Xception'{errorCode = 1001, message = <<"This is an Xception">>} = ExnS1,
+        #'Xception'{errorCode = 1001, testMessage = <<"This is an Xception">>} = ExnS1,
         ClientS2;
       throw:{ClientS2, {exception, _ExnS1 = #'Xception2'{}}} ->
         io:format("Wrong exception type!~n", []),

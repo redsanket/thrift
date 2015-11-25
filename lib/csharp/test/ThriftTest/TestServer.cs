@@ -302,7 +302,7 @@ namespace Test
             /**
              * Print 'testException(%s)' with arg as '%s'
              * @param string arg - a string indication what type of exception to throw
-             * if arg == "Xception" throw Xception with errorCode = 1001 and message = arg
+             * if arg == "Xception" throw Xception with errorCode = 1001 and testMessage = arg
              * elsen if arg == "TException" throw TException
              * else do not throw anything
              */
@@ -313,7 +313,7 @@ namespace Test
                 {
                     Xception x = new Xception();
                     x.ErrorCode = 1001;
-                    x.Message = arg;
+                    x.TestMessage = arg;
                     throw x;
                 }
                 if (arg == "TException")
@@ -330,7 +330,7 @@ namespace Test
                 {
                     Xception x = new Xception();
                     x.ErrorCode = 1001;
-                    x.Message = "This is an Xception";
+                    x.TestMessage = "This is an Xception";
                     throw x;
                 }
                 else if (arg0 == "Xception2")

@@ -571,12 +571,12 @@ public abstract class ServerTestBase extends TestCase {
     /*try {
         testClient.testException("Xception");
     } catch(Xception e) {
-    	assertEquals(e.message, "Xception");
+    	assertEquals(e.testMessage, "Xception");
     }*/
     /*try {
         testClient.testException("ApplicationException");
     } catch(TException e) {
-    	assertEquals(e.message, "ApplicationException");
+    	assertEquals(e.testMessage, "ApplicationException");
     }*/
   }
 
