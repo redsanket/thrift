@@ -131,15 +131,15 @@ class TestHandler(object):
     # if options.verbose > 1:
     print('testException(%s)' % arg)
     if arg == 'Xception':
-      raise Xception(errorCode=1001, message=arg)
+      raise Xception(errorCode=1001, testMessage=arg)
     elif arg == 'TException':
-      raise TException(message='This is a TException')
+      raise TException(testMessage='This is a TException')
 
   def testMultiException(self, arg0, arg1):
     if options.verbose > 1:
       print('testMultiException(%s, %s)' % (arg0, arg1))
     if arg0 == 'Xception':
-      raise Xception(errorCode=1001, message='This is an Xception')
+      raise Xception(errorCode=1001, testMessage='This is an Xception')
     elif arg0 == 'Xception2':
       raise Xception2(
         errorCode=2002,

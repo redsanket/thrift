@@ -209,11 +209,11 @@ class AbstractTest(unittest.TestCase):
       self.fail("should have gotten exception")
     except Xception, x:
       self.assertEqual(x.errorCode, 1001)
-      self.assertEqual(x.message, 'Xception')
+      self.assertEqual(x.testMessage, 'Xception')
       # TODO ensure same behavior for repr within generated python variants
       # ensure exception's repr method works
       #x_repr = repr(x)
-      #self.assertEqual(x_repr, 'Xception(errorCode=1001, message=\'Xception\')')
+      #self.assertEqual(x_repr, 'Xception(errorCode=1001, testMessage=\'Xception\')')
 
     try:
       self.client.testException("throw_undeclared")

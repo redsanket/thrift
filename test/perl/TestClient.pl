@@ -373,7 +373,7 @@ eval {
     $testClient->testException('Xception');
     print("  void\nFAILURE\n");
 }; if($@ && $@->UNIVERSAL::isa('ThriftTest::Xception')) {
-    print(' caught xception '.$@->{errorCode}.': '.$@->{message}."\n");
+    print(' caught xception '.$@->{errorCode}.': '.$@->{testMessage}."\n");
 }
 
 

@@ -1257,7 +1257,7 @@ main (int argc, char **argv)
           xception != NULL) {
         g_object_get (xception,
                       "errorCode", &int32,
-                      "message",   &string,
+                      "testMessage",   &string,
                       NULL);
         printf ("  {%u, \"%s\"}\n", int32, string);
         g_free (string);
@@ -1345,7 +1345,7 @@ main (int argc, char **argv)
           xception2 == NULL) {
         g_object_get (xception,
                       "errorCode", &int32,
-                      "message",   &string,
+                      "testMessage",   &string,
                       NULL);
         printf ("  {%u, \"%s\"}\n", int32, string);
         g_free (string);

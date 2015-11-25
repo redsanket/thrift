@@ -407,7 +407,7 @@ class TestClient {
 
         rslt.StartTestGroup( TestResults.EXITCODE_FAILBIT_EXCEPTIONS);
 
-        // if arg == "Xception" throw Xception with errorCode = 1001 and message = arg
+        // if arg == "Xception" throw Xception with errorCode = 1001 and testMessage = arg
         trace('testException("Xception")');
         try {
             client.testException("Xception");
@@ -415,7 +415,7 @@ class TestClient {
         }
         catch (e : Xception)
         {
-            rslt.Expect( e.message == "Xception", 'testException("Xception")  -  e.message == "Xception"');
+            rslt.Expect( e.testMessage == "Xception", 'testException("Xception")  -  e.testMessage == "Xception"');
             rslt.Expect( e.errorCode == 1001, 'testException("Xception")  -  e.errorCode == 1001');
         }
         catch (e : Dynamic)

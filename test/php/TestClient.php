@@ -378,7 +378,7 @@ try {
   $testClient->testException('Xception');
   print_r("  void\nFAILURE\n");
 } catch (\ThriftTest\Xception $x) {
-  print_r(' caught xception '.$x->errorCode.': '.$x->message."\n");
+  print_r(' caught xception '.$x->errorCode.': '.$x->testMessage."\n");
 }
 
 

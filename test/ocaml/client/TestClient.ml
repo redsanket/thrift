@@ -77,6 +77,6 @@ try
 with Xception _ -> print_string "testException ok\n";;
 try
   ignore(c#testMultiException "Xception" "bya")
-with Xception e -> Printf.printf "%d %s\n" (sod e#get_errorCode) (sod e#get_message);;
+with Xception e -> Printf.printf "%d %s\n" (sod e#get_errorCode) (sod e#get_test_message);;
 
 

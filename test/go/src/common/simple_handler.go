@@ -121,7 +121,7 @@ func (p *simpleHandler) TestException(arg string) (err error) {
 	case "Xception":
 		e := NewXception()
 		e.ErrorCode = 1001
-		e.Message = arg
+		e.TestMessage = arg
 		return e
 	case "TException":
 		return errors.New("Just TException")
@@ -135,7 +135,7 @@ func (p *simpleHandler) TestMultiException(arg0 string, arg1 string) (r *Xtruct,
 	case "Xception":
 		e := NewXception()
 		e.ErrorCode = 1001
-		e.Message = "This is an Xception"
+		e.TestMessage = "This is an Xception"
 		return nil, e
 	case "Xception2":
 		e := NewXception2()

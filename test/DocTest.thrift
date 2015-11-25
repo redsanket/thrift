@@ -92,7 +92,7 @@ struct Insanity
 
 exception Xception {
   1: i32 errorCode,
-  2: string message
+  2: string testMessage
 }
 
 exception Xception2 {

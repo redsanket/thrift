@@ -72,7 +72,7 @@ class TestHandler:
         if s == 'Xception':
             x = Xception()
             x.errorCode = 1001
-            x.message = s
+            x.testMessage = s
             raise x
         elif s == "throw_undeclared":
             raise ValueError("foo")
@@ -174,7 +174,7 @@ class ThriftTestCase(unittest.TestCase):
             self.fail("should have gotten exception")
         except Xception, x:
             self.assertEquals(x.errorCode, 1001)
-            self.assertEquals(x.message, 'Xception')
+            self.assertEquals(x.testMessage, 'Xception')
 
         try:
             yield self.client.testException("throw_undeclared")

@@ -83,7 +83,7 @@ var xxs = &thrifttest.Xtruct{
 	I64Thing:    424242,
 }
 
-var xcept = &thrifttest.Xception{ErrorCode: 1001, Message: "some"}
+var xcept = &thrifttest.Xception{ErrorCode: 1001, TestMessage: "some"}
 
 func callEverythingWithMock(t *testing.T, client *thrifttest.ThriftTestClient, handler *MockThriftTest) {
 	gomock.InOrder(
@@ -109,7 +109,7 @@ func callEverythingWithMock(t *testing.T, client *thrifttest.ThriftTestClient, h
 		handler.EXPECT().TestMulti(int8(42), int32(4242), int64(424242), map[int16]string{1: "blah", 2: "thing"}, thrifttest.Numberz_EIGHT, thrifttest.UserId(24)).Return(xxs, nil),
 		handler.EXPECT().TestException("some").Return(xcept),
 		handler.EXPECT().TestException("TException").Return(errors.New("Just random exception")),
-		handler.EXPECT().TestMultiException("Xception", "ignoreme").Return(nil, &thrifttest.Xception{ErrorCode: 1001, Message: "This is an Xception"}),
+		handler.EXPECT().TestMultiException("Xception", "ignoreme").Return(nil, &thrifttest.Xception{ErrorCode: 1001, TestMessage: "This is an Xception"}),
 		handler.EXPECT().TestMultiException("Xception2", "ignoreme").Return(nil, &thrifttest.Xception2{ErrorCode: 2002, StructThing: &thrifttest.Xtruct{StringThing: "This is an Xception2"}}),
 		handler.EXPECT().TestOneway(int32(2)).Return(nil),
 		handler.EXPECT().TestVoid(),
@@ -286,7 +286,7 @@ func callEverythingWithMock(t *testing.T, client *thrifttest.ThriftTestClient, h
 	if ign != nil || err == nil {
 		t.Errorf("Expecting exception in TestMultiException() call")
 	}
-	if !reflect.DeepEqual(err, &thrifttest.Xception{ErrorCode: 1001, Message: "This is an Xception"}) {
+	if !reflect.DeepEqual(err, &thrifttest.Xception{ErrorCode: 1001, TestMessage: "This is an Xception"}) {
 		t.Errorf("Unexpected TestMultiException() %#v ", err)
 	}
 

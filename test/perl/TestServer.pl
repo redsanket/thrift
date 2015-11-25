@@ -352,7 +352,7 @@ sub testException() {
   my $arg = shift;
   print("testException($arg)\n");
   if ($arg eq "Xception") {
-    die new ThriftTest::Xception({errorCode => 1001, message => $arg});
+    die new ThriftTest::Xception({errorCode => 1001, testMessage => $arg});
   } elsif ($arg eq "TException") {
     die "astring"; # all unhandled exceptions become TExceptions
   } else {
@@ -367,7 +367,7 @@ sub testMultiException() {
 
   printf("testMultiException(%s, %s)\n", $arg0, $arg1);
   if ($arg0 eq "Xception") {
-    die new ThriftTest::Xception({errorCode => 1001, message => "This is an Xception"});
+    die new ThriftTest::Xception({errorCode => 1001, testMessage => "This is an Xception"});
   } elsif ($arg0 eq "Xception2") {
     my $struct_thing = new ThriftTest::Xtruct({string_thing => "This is an Xception2"});
     die new ThriftTest::Xception2({errorCode => 2002, struct_thing => $struct_thing});

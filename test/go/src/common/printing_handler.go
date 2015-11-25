@@ -316,7 +316,7 @@ func (p *printingHandler) TestMulti(arg0 int8, arg1 int32, arg2 int64, arg3 map[
 
 // Print 'testException(%s)' with arg as '%s'
 // @param string arg - a string indication what type of exception to throw
-// if arg == "Xception" throw Xception with errorCode = 1001 and message = arg
+// if arg == "Xception" throw Xception with errorCode = 1001 and testMessage = arg
 // elsen if arg == "TException" throw TException
 // else do not throw anything
 //
@@ -328,7 +328,7 @@ func (p *printingHandler) TestException(arg string) (err error) {
 	case "Xception":
 		e := NewXception()
 		e.ErrorCode = 1001
-		e.Message = arg
+		e.TestMessage = arg
 		return e
 	case "TException":
 		return errors.New("Just TException")
@@ -338,8 +338,8 @@ func (p *printingHandler) TestException(arg string) (err error) {
 
 // Print 'testMultiException(%s, %s)' with arg0 as '%s' and arg1 as '%s'
 // @param string arg - a string indication what type of exception to throw
-// if arg0 == "Xception" throw Xception with errorCode = 1001 and message = "This is an Xception"
-// elsen if arg0 == "Xception2" throw Xception2 with errorCode = 2002 and message = "This is an Xception2"
+// if arg0 == "Xception" throw Xception with errorCode = 1001 and testMessage = "This is an Xception"
+// elsen if arg0 == "Xception2" throw Xception2 with errorCode = 2002 and testMessage = "This is an Xception2"
 // else do not throw anything
 // @return Xtruct - an Xtruct with StringThing = arg1
 //
@@ -353,7 +353,7 @@ func (p *printingHandler) TestMultiException(arg0 string, arg1 string) (r *Xtruc
 	case "Xception":
 		e := NewXception()
 		e.ErrorCode = 1001
-		e.Message = "This is an Xception"
+		e.TestMessage = "This is an Xception"
 		return nil, e
 	case "Xception2":
 		e := NewXception2()

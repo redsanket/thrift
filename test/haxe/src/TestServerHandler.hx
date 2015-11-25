@@ -422,7 +422,7 @@ class TestServerHandler implements ThriftTest {
     /**
     * Print 'testException(%s)' with arg as '%s'
     * @param string arg - a string indication what type of exception to throw
-    * if arg == "Xception" throw Xception with errorCode = 1001 and message = arg
+    * if arg == "Xception" throw Xception with errorCode = 1001 and testMessage = arg
     * elsen if arg == "TException" throw TException
     * else do not throw anything
     *
@@ -434,7 +434,7 @@ class TestServerHandler implements ThriftTest {
         if (arg == "Xception") {
             var x = new Xception();
             x.errorCode = 1001;
-            x.message = arg;
+            x.testMessage = arg;
             throw x;
         };
         if (arg == "TException") {
@@ -447,9 +447,9 @@ class TestServerHandler implements ThriftTest {
     * Print 'testMultiException(%s, %s)' with arg0 as '%s' and arg1 as '%s'
     * @param string arg - a string indication what type of exception to throw
     * if arg0 == "Xception"
-    * throw Xception with errorCode = 1001 and message = "This is an Xception"
+    * throw Xception with errorCode = 1001 and testMessage = "This is an Xception"
     * else if arg0 == "Xception2"
-    * throw Xception2 with errorCode = 2002 and message = "This is an Xception2"
+    * throw Xception2 with errorCode = 2002 and testMessage = "This is an Xception2"
     * else do not throw anything
     * @return Xtruct - an Xtruct with string_thing = arg1
     *
@@ -462,7 +462,7 @@ class TestServerHandler implements ThriftTest {
         if (arg0 == "Xception") {
             var x = new Xception();
             x.errorCode = 1001;
-            x.message = "This is an Xception";
+            x.testMessage = "This is an Xception";
             throw x;
         } else if (arg0 == "Xception2") {
             var x = new Xception2();

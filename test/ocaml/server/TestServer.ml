@@ -96,7 +96,7 @@ object (self)
     if (sod s) = "Xception" then
       let x = new xception in
         x#set_errorCode 1001;
-        x#set_message "This is an Xception";
+        x#set_test_message "This is an Xception";
         raise (Xception x)
     else ()
   method testMultiException a0 a1 =
@@ -104,7 +104,7 @@ object (self)
     if (sod a0) = "Xception" then
       let x = new xception in
         x#set_errorCode 1001;
-        x#set_message "This is an Xception";
+        x#set_test_message "This is an Xception";
         raise (Xception x)
     else (if (sod a0) = "Xception2" then
               let x = new xception2 in

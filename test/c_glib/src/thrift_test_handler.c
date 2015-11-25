@@ -692,7 +692,7 @@ thrift_test_handler_test_exception (TTestThriftTestIf  *iface,
        argument, set *error to NULL and return FALSE */
     *err1 = g_object_new (T_TEST_TYPE_XCEPTION,
                           "errorCode", 1001,
-                          "message",   g_strdup (arg),
+                          "testMessage",   g_strdup (arg),
                           NULL);
     *error = NULL;
     result = FALSE;
@@ -747,7 +747,7 @@ thrift_test_handler_test_multi_exception (TTestThriftTestIf  *iface,
   if (strncmp (arg0, "Xception", 9) == 0) {
     *err1 = g_object_new (T_TEST_TYPE_XCEPTION,
                           "errorCode", 1001,
-                          "message",   g_strdup ("This is an Xception"),
+                          "testMessage",   g_strdup ("This is an Xception"),
                           NULL);
     result = FALSE;
   }

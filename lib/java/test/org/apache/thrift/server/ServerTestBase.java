@@ -244,9 +244,8 @@ public abstract class ServerTestBase extends TestCase {
     public void testException(String arg) throws Xception, TException {
       System.out.print("testException("+arg+")\n");
       if (arg.equals("Xception")) {
-        Xception x = new Xception();
+        Xception x = new Xception(arg);
         x.errorCode = 1001;
-        x.message = arg;
         throw x;
       } else if (arg.equals("TException")) {
         throw new TException(arg);
@@ -260,9 +259,8 @@ public abstract class ServerTestBase extends TestCase {
     public Xtruct testMultiException(String arg0, String arg1) throws Xception, Xception2 {
       System.out.print("testMultiException(" + arg0 + ", " + arg1 + ")\n");
       if (arg0.equals("Xception")) {
-        Xception x = new Xception();
+        Xception x = new Xception("This is an Xception");
         x.errorCode = 1001;
-        x.message = "This is an Xception";
         throw x;
       } else if (arg0.equals("Xception2")) {
         Xception2 x = new Xception2();

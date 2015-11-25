@@ -23,7 +23,7 @@ struct ListCapitalizedStructs
 
 exception Xception {
   1: i32 errorCode,
-  2: binary message
+  2: binary testMessage
 }
 
 service LegacyNames

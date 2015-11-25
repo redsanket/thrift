@@ -821,7 +821,7 @@ int main(int argc, char** argv) {
       return_code |= ERR_EXCEPTIONS;
 
     } catch (Xception& e) {
-      printf("  {%u, \"%s\"}\n", e.errorCode, e.message.c_str());
+      printf("  {%u, \"%s\"}\n", e.errorCode, e.testMessage.c_str());
     }
 
     try {
@@ -852,7 +852,7 @@ int main(int argc, char** argv) {
       printf("  result\n*** FAILED ***\n");
       return_code |= ERR_EXCEPTIONS;
     } catch (Xception& e) {
-      printf("  {%u, \"%s\"}\n", e.errorCode, e.message.c_str());
+      printf("  {%u, \"%s\"}\n", e.errorCode, e.testMessage.c_str());
     }
 
     try {

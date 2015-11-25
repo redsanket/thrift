@@ -59,7 +59,7 @@ var xxs = &thrifttest.Xtruct{
 	I64Thing:    424242,
 }
 
-var xcept = &thrifttest.Xception{ErrorCode: 1001, Message: "Xception"}
+var xcept = &thrifttest.Xception{ErrorCode: 1001, TestMessage: "Xception"}
 
 func callEverything(client *thrifttest.ThriftTestClient) {
 	var err error
@@ -271,7 +271,7 @@ func callEverything(client *thrifttest.ThriftTestClient) {
 	if ign != nil || err == nil {
 		t.Fatalf("Expecting exception in TestMultiException() call")
 	}
-	if !reflect.DeepEqual(err, &thrifttest.Xception{ErrorCode: 1001, Message: "This is an Xception"}) {
+	if !reflect.DeepEqual(err, &thrifttest.Xception{ErrorCode: 1001, TestMessag: "This is an Xception"}) {
 		t.Fatalf("Unexpected TestMultiException() %#v ", err)
 	}
 

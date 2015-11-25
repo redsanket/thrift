@@ -314,7 +314,7 @@ public:
     if (arg.compare("Xception") == 0) {
       Xception e;
       e.errorCode = 1001;
-      e.message = arg;
+      e.testMessage = arg;
       throw e;
     } else if (arg.compare("TException") == 0) {
       apache::thrift::TException e;
@@ -335,7 +335,7 @@ public:
     if (arg0.compare("Xception") == 0) {
       Xception e;
       e.errorCode = 1001;
-      e.message = "This is an Xception";
+      e.testMessage = "This is an Xception";
       throw e;
     } else if (arg0.compare("Xception2") == 0) {
       Xception2 e;

@@ -67,7 +67,7 @@ record_generation_test_() ->
     )},
     {"Xception record", ?_assertMatch(
       {'Xception', _, _},
-      #'Xception'{errorCode=null,message=null}
+      #'Xception'{errorCode=null,testMessage=null}
     )},
     {"Xception2 record", ?_assertMatch(
       {'Xception2', _, _},
@@ -223,7 +223,7 @@ struct_info_test_() ->
     {"Xception definition", ?_assertEqual(
       {struct, [
         {1, undefined, i32, errorCode, undefined},
-        {2, undefined, string, message, undefined}
+        {2, undefined, string, testMessage, undefined}
       ]},
       thrift_test_types:struct_info_ext('Xception')
     )},

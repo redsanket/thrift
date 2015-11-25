@@ -115,7 +115,7 @@ struct CrazyNesting {
 
 exception Xception {
   1: i32 errorCode,
-  2: string message
+  2: string testMessage
 }
 
 exception Xception2 {
@@ -282,7 +282,7 @@ service ThriftTest
   /**
    * Print 'testException(%s)' with arg as '%s'
    * @param string arg - a string indication what type of exception to throw
-   * if arg == "Xception" throw Xception with errorCode = 1001 and message = arg
+   * if arg == "Xception" throw Xception with errorCode = 1001 and testMessage = arg
    * elsen if arg == "TException" throw TException
    * else do not throw anything
    */
@@ -291,8 +291,8 @@ service ThriftTest
   /**
    * Print 'testMultiException(%s, %s)' with arg0 as '%s' and arg1 as '%s'
    * @param string arg - a string indication what type of exception to throw
-   * if arg0 == "Xception" throw Xception with errorCode = 1001 and message = "This is an Xception"
-   * elsen if arg0 == "Xception2" throw Xception2 with errorCode = 2002 and message = "This is an Xception2"
+   * if arg0 == "Xception" throw Xception with errorCode = 1001 and testMessage = "This is an Xception"
+   * elsen if arg0 == "Xception2" throw Xception2 with errorCode = 2002 and testMessage = "This is an Xception2"
    * else do not throw anything
    * @return Xtruct - an Xtruct with string_thing = arg1
    */
