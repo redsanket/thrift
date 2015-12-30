@@ -210,7 +210,7 @@ public class TSaslServerTransport extends TSaslTransport {
     public TTransport getTransport(TTransport base) {
       WeakReference<TSaslServerTransport> ret = transportMap.get(base);
       if (ret == null || ret.get() == null) {
-        LOGGER.debug("transport map does not contain key", base);
+        LOGGER.debug("transport map does not contain key {}", base);
         ret = new WeakReference<TSaslServerTransport>(new TSaslServerTransport(serverDefinitionMap, base));
         try {
           ret.get().open();
