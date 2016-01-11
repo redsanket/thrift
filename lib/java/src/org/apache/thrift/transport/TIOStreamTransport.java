@@ -125,6 +125,8 @@ public class TIOStreamTransport extends TTransport {
     int bytesRead;
     try {
       bytesRead = inputStream_.read(buf, off, len);
+      LOGGER.debug("read bytes {}", bytesRead);
+      LOGGER.debug("inputStream {}", inputStream_);
     } catch (IOException iox) {
       throw new TTransportException(TTransportException.UNKNOWN, iox);
     }

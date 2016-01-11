@@ -265,12 +265,14 @@ public class TThreadPoolServer extends TServer {
 
       try {
         processor = processorFactory_.getProcessor(client_);
+        LOGGER.debug("proccessor {} inputTransportFactory_", processor, inputTransportFactory_);
         inputTransport = inputTransportFactory_.getTransport(client_);
         outputTransport = outputTransportFactory_.getTransport(client_);
         inputProtocol = inputProtocolFactory_.getProtocol(inputTransport);
-        outputProtocol = outputProtocolFactory_.getProtocol(outputTransport);	  
+        outputProtocol = outputProtocolFactory_.getProtocol(outputTransport);
 
         eventHandler = getEventHandler();
+
         if (eventHandler != null) {
           connectionContext = eventHandler.createContext(inputProtocol, outputProtocol);
         }

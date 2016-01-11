@@ -119,6 +119,7 @@ abstract class TSaslTransport extends TTransport {
    */
   protected TSaslTransport(TTransport underlyingTransport) {
     this.underlyingTransport = underlyingTransport;
+    LOGGER.debug("underlying {}", this.underlyingTransport);
   }
 
   /**
@@ -133,6 +134,7 @@ abstract class TSaslTransport extends TTransport {
   protected TSaslTransport(SaslClient saslClient, TTransport underlyingTransport) {
     sasl = new SaslParticipant(saslClient);
     this.underlyingTransport = underlyingTransport;
+    LOGGER.debug("underlying {}", this.underlyingTransport);
   }
 
   protected void setSaslServer(SaslServer saslServer) {
@@ -324,7 +326,7 @@ abstract class TSaslTransport extends TTransport {
        */
       if (!readSaslHeader && e.getType() == TTransportException.END_OF_FILE) {
         underlyingTransport.close();
-        LOGGER.debug("No data or no sasl data in the stream");
+        LOGGER.debug("No data or no sasl data in the stream {}", readSaslHeader);
         throw new TSaslTransportException("No data or no sasl data in the stream", e);
       }
       throw e;
